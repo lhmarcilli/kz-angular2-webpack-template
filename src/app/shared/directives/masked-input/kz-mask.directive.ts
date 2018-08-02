@@ -35,6 +35,8 @@ export class KzMaskDirective implements ControlValueAccessor {
   writeValue(value: any): void {
     if (value) {
       this.el.nativeElement.value = this.aplicarMascara(value);
+    }else{
+      this.el.nativeElement.value = '';
     }
   }
 
